@@ -9,66 +9,78 @@ export default class CreateServicio extends Component {
     super(props)
 
     // Setting up functions
-    this.onChangeServicioName = this.onChangeServicioName.bind(this);
-    this.onChangeServicioEmail = this.onChangeServicioEmail.bind(this);
-    this.onChangeServicioRollno = this.onChangeServicioRollno.bind(this);
+    this.onChangeServicioCategoria = this.onChangeServicioCategoria.bind(this);
+    this.onChangeServicioDescripcion = this.onChangeServicioDescripcion.bind(this);
+    this.onChangeServicioNombre = this.onChangeServicioNombre.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     // Setting up state
     this.state = {
-      name: '',
-      email: '',
-      rollno: ''
+      categoria: '',
+      descripcion: '',
+      nombre: ''
     }
   }
 
-  onChangeServicioName(e) {
-    this.setState({ name: e.target.value })
+  onChangeServicioCategoria(e) {
+    this.setState({ categoria: e.target.value })
   }
 
-  onChangeServicioEmail(e) {
-    this.setState({ email: e.target.value })
+  onChangeServicioDescripcion(e) {
+    this.setState({ descripcion: e.target.value })
   }
 
-  onChangeServicioRollno(e) {
-    this.setState({ rollno: e.target.value })
+  onChangeServicioNombre(e) {
+    this.setState({ nombre: e.target.value })
   }
 
   onSubmit(e) {
     e.preventDefault()
 
     const ServicioObject = {
-      name: this.state.name,
-      email: this.state.email,
-      rollno: this.state.rollno
+      categoria: this.state.categoria,
+      descripcion: this.state.descripcion,
+      nombre: this.state.nombre
     };
 
     axios.post('http://localhost:4000/Servicios/create-servicio', ServicioObject)
       .then(res => console.log(res.data));
 
     this.setState({
-      name: '',
-      email: '',
-      rollno: ''
+      categoria: '',
+      descripcion: '',
+      nombre: '',
+      precio: '',
+      prestador: ''
     });
   }
 
   render() {
-    return (<div className="form-wrapper">
+    return (<div classCategoria="form-wrapper">
       <Form onSubmit={this.onSubmit}>
-        <Form.Group controlId="Name">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="text" value={this.state.name} onChange={this.onChangeServicioName} />
+        <Form.Group controlId="Categoria">
+          <Form.Label>Categoria</Form.Label>
+          <Form.Control type="text" value={this.state.categoria} onChange={this.onChangeServicioCategoria} />
         </Form.Group>
 
-        <Form.Group controlId="Email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" value={this.state.email} onChange={this.onChangeServicioEmail} />
+        <Form.Group controlId="Descripcion">
+          <Form.Label>Descripcion</Form.Label>
+          <Form.Control type="descripcion" value={this.state.descripcion} onChange={this.onChangeServicioDescripcion} />
         </Form.Group>
 
-        <Form.Group controlId="Name">
-          <Form.Label>Roll No</Form.Label>
-          <Form.Control type="text" value={this.state.rollno} onChange={this.onChangeServicioRollno} />
+        <Form.Group controlId="Categoria">
+          <Form.Label>Nombre del Servicio</Form.Label>
+          <Form.Control type="text" value={this.state.nombre} onChange={this.onChangeServicioNombre} />
+        </Form.Group>
+
+        <Form.Group controlId="Nombre">
+          <Form.Label>Nombre</Form.Label>
+          <Form.Control type="nombre" value={this.state.nombre} onChange={this.onChangeServicioNombre} />
+        </Form.Group>
+
+        <Form.Group controlId="Prestador">
+          <Form.Label>Prestador</Form.Label>
+          <Form.Control type="prestador" value={this.state.prestador} onChange={this.onChangeServicioPrestador} />
         </Form.Group>
 
         <Button variant="danger" size="lg" block="block" type="submit">

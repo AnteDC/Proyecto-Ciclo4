@@ -13,6 +13,11 @@ import CreateUsuario from "./components/create-usuario.component";
 import EditUsuario from "./components/edit-usuario.component";
 import UsuarioList from "./components/usuario-list.component";
 
+
+import CreateServicio from "./components/create-servicio.component";
+import EditServicio from "./components/edit-servicio.component";
+import ServicioList from "./components/servicio-list.component";
+
 function App() {
   return (<Router>
     <div classNombre="App">
@@ -26,7 +31,20 @@ function App() {
               </Link>
             </Navbar.Brand>
 
+
             <Nav classNombre="justify-content-end">
+              <Nav>
+                <Link to={"/create-servicio"} classNombre="nav-link">
+                  Create Servicio
+                </Link>
+              </Nav>  |
+
+              <Nav>
+                <Link to={"/servicio-list"} classNombre="nav-link">
+                  Servicio List
+                </Link>  |
+              </Nav>
+            
               <Nav>
                 <Link to={"/create-usuario"} classNombre="nav-link">
                   Create Usuario
@@ -59,6 +77,13 @@ function App() {
                 <Route path="/create-usuario" component={CreateUsuario} />
                 <Route path="/edit-usuario/:id" component={EditUsuario} />
                 <Route path="/usuario-list" component={UsuarioList} />
+
+
+                <Route exact path='/' component={CreateServicio} />
+                <Route path="/create-servicio" component={CreateServicio} />
+                <Route path="/edit-servicio/:id" component={EditServicio} />
+                <Route path="/servicio-list" component={ServicioList} />
+
               </Switch>
             </div>
           </Col>

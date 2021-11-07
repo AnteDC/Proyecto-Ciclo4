@@ -33,13 +33,15 @@ export default class ServicioList extends Component {
 
 
   render() {
-    return (<div className="table-wrapper">
+    return (<div classCategoria="table-wrapper">
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Roll No</th>
+            <th>Categoria</th>
+            <th>Descripcion</th>
+            <th>Nombre del Servicio</th>
+            <th>Precio del Servicio</th>
+            <th>Prestador del Servicio</th>
             <th>Action</th>
           </tr>
         </thead>

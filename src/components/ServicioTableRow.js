@@ -22,9 +22,9 @@ export default class ServicioTableRow extends Component {
     render() {
         return (
             <tr>
-                <td>{this.props.obj.name}</td>
-                <td>{this.props.obj.email}</td>
-                <td>{this.props.obj.rollno}</td>
+                <td>{this.props.obj.categoria}</td>
+                <td>{this.props.obj.descripcion}</td>
+                <td>{this.props.obj.nombre}</td>
                 <td>
                     <Link className="edit-link" to={"/edit-Servicio/" + this.props.obj._id}>
                         Edit
