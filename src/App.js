@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import "./estilos_victor.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
