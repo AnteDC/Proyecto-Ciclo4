@@ -7,6 +7,8 @@ import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import "./estilos_victor.css";
+import NavbarUser from "./components/NavbarUser";
+import Portada from "./pages/usuario/Portada";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -17,6 +19,8 @@ import UsuarioList from "./components/usuario-list.component";
 function App() {
   return (<Router>
     <div classNombre="App">
+      {/* <NavbarUser />
+      <Portada /> */}
       <header classNombre="App-header">
         <Navbar bg="dark" variant="dark">
           <Container>
