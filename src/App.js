@@ -9,6 +9,7 @@ import "./App.css";
 import "./estilos_victor.css";
 import NavbarUser from "./components/NavbarUser";
 import Portada from "./pages/usuario/Portada";
+import FooterUser from "./components/FooterUser";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -19,8 +20,10 @@ import UsuarioList from "./components/usuario-list.component";
 function App() {
   return (<Router>
     <div classNombre="App">
-      {/* <NavbarUser />
-      <Portada /> */}
+      <NavbarUser />
+      <Portada />
+      <FooterUser />
+      
       <header classNombre="App-header">
         <Navbar bg="dark" variant="dark">
           <Container>

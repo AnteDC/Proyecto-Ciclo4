@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const NavbarUser = () => {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light sombra">
                 <div className="container-fluid py-1 px-5 ">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
                         aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">

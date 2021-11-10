@@ -57,7 +57,6 @@ const Portada = () => {
                         <img alt='' src={Imagen3} className="radius-50 img-80 py-3" />
                     </div>
                 </div>
-                <hr className="m-5" />
             </div>
         </div>
     )
