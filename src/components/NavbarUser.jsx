@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../images/icono.png';
 import { NavLink } from "react-router-dom";
+import ModalLogin from './modales/Login';
 
 const NavbarUser = () => {
     return (
@@ -35,7 +36,9 @@ const NavbarUser = () => {
                                 <a className="nav-link" href="#modalContacto" data-bs-toggle="modal" data-bs-target="#modalContacto">Contáctenos</a>
                             </li>
                         </ul>
-                        <button className="btn btn-info ms-2" data-bs-toggle="modal" data-bs-target="#modalLogin">Ingresar</button>
+                        <div className="ms-2">
+                            <ModalLogin />
+                        </div>
                     </div>
                 </div>
             </nav>

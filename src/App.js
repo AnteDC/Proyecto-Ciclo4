@@ -73,7 +73,8 @@ function App() {
         </Row>
       </Container>
     </div>
-  </Router>);
+  </Router>)
+  ;
 }
 
 export default App;
