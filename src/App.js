@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import "./estilos_victor.css";
 import NavbarUser from "./components/NavbarUser";
-import Portada from "./pages/usuario/Portada";
+import Portada from "./pages/usuario/portada"
 import FooterUser from "./components/FooterUser";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
