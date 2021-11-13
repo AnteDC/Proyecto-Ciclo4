@@ -6,6 +6,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import "./estilos_victor.css";
+import NavbarUser from "./components/NavbarUser";
+import Portada from "./pages/usuario/Portada";
+import FooterUser from "./components/FooterUser";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -21,6 +25,10 @@ import ServicioList from "./components/servicio-list.component";
 function App() {
   return (<Router>
     <div classNombre="App">
+      <NavbarUser />
+      <Portada />
+      <FooterUser />
+      
       <header classNombre="App-header">
         <Navbar bg="dark" variant="dark">
           <Container>
@@ -90,7 +98,8 @@ function App() {
         </Row>
       </Container>
     </div>
-  </Router>);
+  </Router>)
+  ;
 }
 
 export default App;
