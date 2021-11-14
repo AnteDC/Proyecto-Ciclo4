@@ -1,4 +1,6 @@
 import React from 'react';
+import ModalContacto from '../../components/modales/Contactenos';
+import ModalEquipo from '../../components/modales/Equipo';
 import Imagen1 from '../../images/imagen1.png';
 import Imagen2 from '../../images/imagen2.png';
 import Imagen3 from '../../images/imagen3.png';
@@ -16,7 +18,7 @@ const Portada = () => {
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi a dolorem labore officiis odit. Nulla aspernatur, impedit explicabo, nam ipsum necessitatibus nemo culpa quisquam dignissimos id animi, neque at pariatur?
                             </p>
-                            <button className="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalContacto">Contáctenos</button>
+                            <div className="btn btn-info"><ModalContacto /></div>
                         </div>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center align-items-center order-1 order-md-2">
@@ -50,7 +52,7 @@ const Portada = () => {
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi a dolorem labore officiis odit. Nulla aspernatur, impedit explicabo, nam ipsum necessitatibus nemo culpa quisquam dignissimos id animi, neque at pariatur?
                             </p>
-                            <button className="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalEquipo">Conócenos</button>
+                            <div className="btn btn-info"><ModalEquipo /></div>
                         </div>
                     </div>
                     <div className="col-md-6 d-flex justify-content-center align-items-center order-1 order-md-2">
