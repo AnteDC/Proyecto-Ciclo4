@@ -24,49 +24,49 @@ import ServicioList from "./components/servicio-list.component";
 
 function App() {
   return (<Router>
-    <div classNombre="App">
+    <div className="App">
       <NavbarUser />
       <Portada />
       <FooterUser />
       
-      <header classNombre="App-header">
+      <header className="App-header">
         <Navbar bg="dark" variant="dark">
           <Container>
 
             <Navbar.Brand>
-              <Link to={"/create-usuario"} classNombre="nav-link">
+              <Link to={"/create-usuario"} className="nav-link">
                 PET HOME SERVICE App
               </Link>
             </Navbar.Brand>
 
 
-            <Nav classNombre="justify-content-end">
+            <Nav className="justify-content-end">
               <Nav>
-                <Link to={"/create-servicio"} classNombre="nav-link">
+                <Link to={"/create-servicio"} className="nav-link">
                   Create Servicio
                 </Link>
               </Nav>  |
 
               <Nav>
-                <Link to={"/servicio-list"} classNombre="nav-link">
+                <Link to={"/servicio-list"} className="nav-link">
                   Servicio List
                 </Link>  |
               </Nav>
             
               <Nav>
-                <Link to={"/create-usuario"} classNombre="nav-link">
+                <Link to={"/create-usuario"} className="nav-link">
                   Create Usuario
                 </Link>
               </Nav>  |
 
               {/* <Nav>
-                <Link to={"/edit-usuario/:id"} classNombre="nav-link">
+                <Link to={"/edit-usuario/:id"} className="nav-link">
                   Edit Usuario
                 </Link>
               </Nav> */}
 
               <Nav>
-                <Link to={"/usuario-list"} classNombre="nav-link">
+                <Link to={"/usuario-list"} className="nav-link">
                   Usuario List
                 </Link>  |
               </Nav>
@@ -79,7 +79,7 @@ function App() {
       <Container>
         <Row>
           <Col md={12}>
-            <div classNombre="wrapper">
+            <div className="wrapper">
               <Switch>
                 <Route exact path='/' component={CreateUsuario} />
                 <Route path="/create-usuario" component={CreateUsuario} />
