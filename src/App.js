@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import "./estilos_victor.css";
 import NavbarUser from "./components/NavbarUser";
-import Portada from "./pages/usuario/Portada";
+import Portada from "./pages/usuario/portada";
 import FooterUser from "./components/FooterUser";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -16,6 +16,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import CreateUsuario from "./components/create-usuario.component";
 import EditUsuario from "./components/edit-usuario.component";
 import UsuarioList from "./components/usuario-list.component";
+
+
+import CreateServicio from "./components/create-servicio.component";
+import EditServicio from "./components/edit-servicio.component";
+import ServicioList from "./components/servicio-list.component";
 
 function App() {
   return (<Router>
@@ -34,7 +39,20 @@ function App() {
               </Link>
             </Navbar.Brand>
 
+
             <Nav className="justify-content-end">
+              <Nav>
+                <Link to={"/create-servicio"} className="nav-link">
+                  Create Servicio
+                </Link>
+              </Nav>  |
+
+              <Nav>
+                <Link to={"/servicio-list"} className="nav-link">
+                  Servicio List
+                </Link>  |
+              </Nav>
+            
               <Nav>
                 <Link to={"/create-usuario"} className="nav-link">
                   Create Usuario
@@ -67,6 +85,13 @@ function App() {
                 <Route path="/create-usuario" component={CreateUsuario} />
                 <Route path="/edit-usuario/:id" component={EditUsuario} />
                 <Route path="/usuario-list" component={UsuarioList} />
+
+
+                <Route exact path='/' component={CreateServicio} />
+                <Route path="/create-servicio" component={CreateServicio} />
+                <Route path="/edit-servicio/:id" component={EditServicio} />
+                <Route path="/servicio-list" component={ServicioList} />
+
               </Switch>
             </div>
           </Col>
