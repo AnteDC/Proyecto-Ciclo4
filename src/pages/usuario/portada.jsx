@@ -4,10 +4,13 @@ import ModalEquipo from '../../components/modales/Equipo';
 import Imagen1 from '../../images/imagen1.png';
 import Imagen2 from '../../images/imagen2.png';
 import Imagen3 from '../../images/imagen3.png';
+import NavbarUser from '../../components/NavbarUser';
+import FooterUser from '../../components/FooterUser';
 
 const Portada = () => {
     return (
         <div>
+            <NavbarUser />
             <div className="container my-5">
                 <div className="row">
                     <div className="col-md-6 ps-4 d-flex justify-content-center align-items-center order-2 order-md-1">
@@ -60,6 +63,7 @@ const Portada = () => {
                     </div>
                 </div>
             </div>
+            <FooterUser />
         </div>
     )
 }

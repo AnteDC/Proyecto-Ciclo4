@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import UsuarioTableRow from "./UsuarioTableRow";
+import NavbarAdmin from "./NavbarAdmin";
 
 export default class UsuarioList extends Component {
   constructor(props) {
@@ -33,20 +34,26 @@ export default class UsuarioList extends Component {
   render() {
     return (
       <div>
-        <h1 className="py-3">Usuarios</h1>
-        <div classNombre="table-wrapper">
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Rol</th>
-                <th>Login</th>
-                <th>Contacto</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>{this.DataTable()}</tbody>
-          </Table>
+        <NavbarAdmin />
+        <div className="container">
+        <div className="d-flex justify-content-between align-items-center">
+            <h1 className="py-3">Usuarios</h1>
+            <div className="btn btn-info">Modal crear</div>
+          </div>
+          <div className="">
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Rol</th>
+                  <th>Login</th>
+                  <th>Contacto</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>{this.DataTable()}</tbody>
+            </Table>
+          </div>
         </div>
       </div>
     );

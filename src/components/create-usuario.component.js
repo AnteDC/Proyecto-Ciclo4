@@ -64,7 +64,7 @@ export default class CreateUsuario extends Component {
   }
 
   render() {
-    return (<div classNombre="form-wrapper">
+    return (<div className="form-wrapper">
       <Form onSubmit={this.onSubmit}>
         <Form.Group controlId="Nombre">
           <Form.Label>Nombre</Form.Label>
