@@ -44,7 +44,7 @@ const NavbarAdmin = () => {
               </li>
             </ul>
             <div className="ms-2">
-              <NavLink className="btn btn-danger px-3 p_white" to="/">
+              <NavLink className="btn btn-warning px-3 p_white" to="/">
                 Salir
               </NavLink>
             </div>

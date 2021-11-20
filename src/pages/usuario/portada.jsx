@@ -6,6 +6,7 @@ import Imagen2 from '../../images/imagen2.png';
 import Imagen3 from '../../images/imagen3.png';
 import NavbarUser from '../../components/NavbarUser';
 import FooterUser from '../../components/FooterUser';
+import { NavLink } from "react-router-dom";
 
 const Portada = () => {
     return (
@@ -41,7 +42,7 @@ const Portada = () => {
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi a dolorem labore officiis odit. Nulla aspernatur, impedit explicabo, nam ipsum necessitatibus nemo culpa quisquam dignissimos id animi, neque at pariatur?
                             </p>
-                            <button className="btn btn-info">Más información</button>
+                            <NavLink className="btn btn-info" to="/servicios">Más información</NavLink>
                         </div>
                     </div>
                 </div>
