@@ -1,10 +1,6 @@
 import React from 'react';
 import Logo from '../images/icono.png';
 import { NavLink } from "react-router-dom";
-import ModalLogin from './modales/Login';
-import ModalContacto from './modales/Contactenos';
-import ModalEquipo from './modales/Equipo';
-import ModalOfertas from './modales/Ofertas';
 
 const NavbarAdmin = () => {
     return (
