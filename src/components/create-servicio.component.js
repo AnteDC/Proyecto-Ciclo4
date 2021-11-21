@@ -56,7 +56,7 @@ export default class CreateServicio extends Component {
   }
 
   render() {
-    return (<div classCategoria="form-wrapper">
+    return (<div>
       <Form onSubmit={this.onSubmit}>
         <Form.Group controlId="Categoria">
           <Form.Label>Categoria</Form.Label>
@@ -83,8 +83,8 @@ export default class CreateServicio extends Component {
           <Form.Control type="prestador" value={this.state.prestador} onChange={this.onChangeServicioPrestador} />
         </Form.Group>
 
-        <Button variant="danger" size="lg" block="block" type="submit">
-          Create Servicio
+        <Button variant="info" size="lg" block="block" type="submit">
+          Crear servicio
         </Button>
       </Form>
     </div>);

@@ -3,6 +3,7 @@ import axios from "axios";
 import Table from "react-bootstrap/Table";
 import UsuarioTableRow from "./UsuarioTableRow";
 import NavbarAdmin from "./NavbarAdmin";
+import ModalCrearUsuario from "./modales/CrearUsuario";
 
 export default class UsuarioList extends Component {
   constructor(props) {
@@ -38,7 +39,7 @@ export default class UsuarioList extends Component {
         <div className="container">
         <div className="d-flex justify-content-between align-items-center">
             <h1 className="py-3">Usuarios</h1>
-            <div className="btn btn-info">Modal crear</div>
+            <ModalCrearUsuario />
           </div>
           <div className="">
             <Table striped bordered hover>
