@@ -51,7 +51,7 @@ export default class EditUsuario extends Component {
   }
 
   onChangeUsuarioContacto(e) {
-    this.setState({ login: e.target.value })
+    this.setState({ contacto: e.target.value })
   }
 
   onSubmit(e) {
@@ -91,19 +91,19 @@ export default class EditUsuario extends Component {
         </Form.Group>
 
         <Form.Group controlId="Login">
-          <Form.Label>Roll No</Form.Label>
+          <Form.Label>Login</Form.Label>
           <Form.Control type="text" value={this.state.login} onChange={this.onChangeUsuarioLogin} />
         </Form.Group>
 
 
         <Form.Group controlId="Contacto">
-          <Form.Label>Roll No</Form.Label>
-          <Form.Control type="text" value={this.state.login} onChange={this.onChangeUsuarioContacto} />
+          <Form.Label>Contacto</Form.Label>
+          <Form.Control type="number" value={this.state.contacto} onChange={this.onChangeUsuarioContacto} />
         </Form.Group>
 
 
         <Button variant="danger" size="lg" block="block" type="submit">
-          Update Usuario
+          Actualizar usuario
         </Button>
       </Form>
     </div>);

@@ -27,10 +27,11 @@ export default class UsuarioTableRow extends Component {
                 <td>{this.props.obj.login}</td>
                 <td>{this.props.obj.contacto}</td>
                 <td>
-                    <Link classNombre="edit-link" to={"/edit-Usuario/" + this.props.obj._id}>
-                        Edit
-                    </Link> |
-                    <Button onClick={this.deleteUsuario} size="sm" variant="danger">Delete</Button>
+                    <Link className="edit-link" to={"/edit-Usuario/" + this.props.obj._id}>
+                        Editar
+                    </Link>
+                    | 
+                    <Button className="ms-2" onClick={this.deleteUsuario} size="sm" variant="danger">Eliminar</Button>
                 </td>
             </tr>
         );
