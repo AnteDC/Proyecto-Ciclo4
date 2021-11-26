@@ -4,10 +4,14 @@ import ModalEquipo from '../../components/modales/Equipo';
 import Imagen1 from '../../images/imagen1.png';
 import Imagen2 from '../../images/imagen2.png';
 import Imagen3 from '../../images/imagen3.png';
+import NavbarUser from '../../components/NavbarUser';
+import FooterUser from '../../components/FooterUser';
+import { NavLink } from "react-router-dom";
 
 const Portada = () => {
     return (
         <div>
+            <NavbarUser />
             <div className="container my-5">
                 <div className="row">
                     <div className="col-md-6 ps-4 d-flex justify-content-center align-items-center order-2 order-md-1">
@@ -38,7 +42,7 @@ const Portada = () => {
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi a dolorem labore officiis odit. Nulla aspernatur, impedit explicabo, nam ipsum necessitatibus nemo culpa quisquam dignissimos id animi, neque at pariatur?
                             </p>
-                            <button className="btn btn-info">Más información</button>
+                            <NavLink className="btn btn-info" to="/servicios">Más información</NavLink>
                         </div>
                     </div>
                 </div>
@@ -60,6 +64,7 @@ const Portada = () => {
                     </div>
                 </div>
             </div>
+            <FooterUser />
         </div>
     )
 }

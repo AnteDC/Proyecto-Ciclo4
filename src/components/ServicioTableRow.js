@@ -27,9 +27,9 @@ export default class ServicioTableRow extends Component {
                 <td>{this.props.obj.nombre}</td>
                 <td>
                     <Link className="edit-link" to={"/edit-Servicio/" + this.props.obj._id}>
-                        Edit
+                        Editar
                     </Link>
-                    <Button onClick={this.deleteServicio} size="sm" variant="danger">Delete</Button>
+                    <Button className="ms-2" onClick={this.deleteServicio} size="sm" variant="danger">Eliminar</Button>
                 </td>
             </tr>
         );

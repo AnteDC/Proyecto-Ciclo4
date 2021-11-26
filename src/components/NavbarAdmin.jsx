@@ -1,17 +1,13 @@
 import React from "react";
 import Logo from "../images/icono.png";
 import { NavLink } from "react-router-dom";
-import ModalLogin from "./modales/Login";
-import ModalContacto from "./modales/Contactenos";
-import ModalEquipo from "./modales/Equipo";
-import ModalOfertas from "./modales/Ofertas";
 
-const NavbarUser = () => {
+const NavbarAdmin = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light sombra">
         <div className="container-fluid py-1 px-5 ">
-          <NavLink className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/servicio-list">
             <div className="d-flex align-items-center">
               <img alt="" src={Logo} height="30" className="pe-2" />
               <h4 className="m-0">
@@ -33,33 +29,24 @@ const NavbarUser = () => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item px-2">
-                <NavLink className="nav-link active" aria-current="page" to="/">
-                  Inicio
-                </NavLink>
-              </li>
-              <li className="nav-item px-2">
-                <NavLink className="nav-link" to="/servicios">
+                <NavLink
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/servicio-list"
+                >
                   Servicios
                 </NavLink>
               </li>
               <li className="nav-item px-2">
-                <div className="nav-link cursor">
-                  <ModalOfertas />
-                </div>
-              </li>
-              <li className="nav-item px-2">
-                <div className="nav-link cursor">
-                  <ModalEquipo />
-                </div>
-              </li>
-              <li className="nav-item px-2">
-                <div className="nav-link cursor">
-                  <ModalContacto />
-                </div>
+                <NavLink className="nav-link" to="/usuario-list">
+                  Usuarios
+                </NavLink>
               </li>
             </ul>
             <div className="ms-2">
-              <ModalLogin />
+              <NavLink className="btn btn-warning px-3 p_white" to="/">
+                Salir
+              </NavLink>
             </div>
           </div>
         </div>
@@ -68,4 +55,4 @@ const NavbarUser = () => {
   );
 };
 
-export default NavbarUser;
+export default NavbarAdmin;

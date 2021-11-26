@@ -1,3 +1,3 @@
 module.exports = {
-  db: 'mongodb://localhost:27017/homeservice'
+  db: 'mongodb+srv://admin:<password>@cluster0.ggaux.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 };

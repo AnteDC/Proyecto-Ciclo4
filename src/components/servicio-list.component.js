@@ -1,28 +1,29 @@
 import React, { Component } from "react";
-import axios from 'axios';
-import Table from 'react-bootstrap/Table';
-import ServicioTableRow from './ServicioTableRow';
-
+import axios from "axios";
+import Table from "react-bootstrap/Table";
+import ServicioTableRow from "./ServicioTableRow";
+import NavbarAdmin from "./NavbarAdmin";
+import ModalCrearServicio from "./modales/CrearServicio";
 
 export default class ServicioList extends Component {
-
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      Servicios: []
+      Servicios: [],
     };
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/Servicios/')
-      .then(res => {
+    axios
+      .get("http://localhost:4000/Servicios/")
+      .then((res) => {
         this.setState({
-          Servicios: res.data
+          Servicios: res.data,
         });
       })
       .catch((error) => {
         console.log(error);
-      })
+      });
   }
 
   DataTable() {
@@ -31,24 +32,32 @@ export default class ServicioList extends Component {
     });
   }
 
-
   render() {
-    return (<div classCategoria="table-wrapper">
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Categoria</th>
-            <th>Descripcion</th>
-            <th>Nombre del Servicio</th>
-            <th>Precio del Servicio</th>
-            <th>Prestador del Servicio</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.DataTable()}
-        </tbody>
-      </Table>
-    </div>);
+    return (
+      <div>
+        <NavbarAdmin />
+        <div className="container">
+          <div className="d-flex justify-content-between align-items-center">
+            <h1 className="py-3">Servicios</h1>
+            <ModalCrearServicio />
+          </div>
+          <div className="">
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Categoria</th>
+                  <th>Descripcion</th>
+                  <th>Nombre del Servicio</th>
+                  <th>Precio del Servicio</th>
+                  <th>Prestador del Servicio</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>{this.DataTable()}</tbody>
+            </Table>
+          </div>
+        </div>
+      </div>
+    );
   }
 }

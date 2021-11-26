@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const ModalLogin = () => {
   const [show, setShow] = useState(false);
@@ -19,19 +20,17 @@ const ModalLogin = () => {
           <Modal.Title><b>Ingresar</b></Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Usuario" />
-            <label for="floatingInput">Usuario</label>
+          <div className="form-floating mb-3">
+            <input type="text" className="form-control" id="floatingInput" placeholder="Usuario" />
+            <label htmlFor="floatingInput">Usuario</label>
           </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" />
-            <label for="floatingPassword">Contraseña</label>
+          <div className="form-floating">
+            <input type="password" className="form-control" id="floatingPassword" placeholder="Contraseña" />
+            <label htmlFor="floatingPassword">Contraseña</label>
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="info">
-            Ingresar
-          </Button>
+          <NavLink className="btn btn-info" to="/servicio-list">Ingresar</NavLink>
           <Button variant="danger" onClick={handleClose}>
             Cancelar
           </Button>

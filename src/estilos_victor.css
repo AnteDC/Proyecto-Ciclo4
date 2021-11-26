@@ -159,3 +159,7 @@
     -webkit-box-shadow: 0 0 5px#888;
     box-shadow: 0 0 5px #888;
   }
+
+  .cuerpo{
+    min-height: calc(100vh - 64px - 72px);
+  }
